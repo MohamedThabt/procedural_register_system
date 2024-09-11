@@ -23,12 +23,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <?php if(isset($_SESSION['user_name'])): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="showdata.php"><i class="fas fa-table"></i> Show Data</a>
                     </li>
+                    <?php endif; ?>
                     <!-- PHP code for conditional rendering -->
                     <?php if(!isset($_SESSION['user_name'])): ?>
                     <li class="nav-item">
@@ -40,6 +42,9 @@
                     <?php else: ?>
                     <li class="nav-item">
                         <a class="nav-link" href="controller/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="change_password.php"><i class="fa-solid fa-key"></i> Change Password</a>
                     </li>
                     <?php endif; ?>
                 </ul>
