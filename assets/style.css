@@ -42,3 +42,38 @@ footer {
 .social-icons a:hover {
   color: #ffa500;
 }
+.hover-anchor {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.hover-anchor img {
+  transition: all 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.hover-anchor:hover img {
+  transform: scale(1.1);
+}
+.hover-anchor .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.hover-anchor:hover .overlay {
+  opacity: 1;
+}
+.hover-anchor .overlay i {
+  color: white;
+  font-size: 3rem;
+}
