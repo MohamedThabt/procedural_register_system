@@ -1,0 +1,44 @@
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.3s ease;
+  position: relative;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffa500; /* Orange color on hover */
+}
+.navbar-dark .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #ffa500; /* Orange underline */
+  transition: all 0.3s ease-in-out;
+}
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+.social-icons a {
+  color: #fffdfd;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #ffa500;
+}

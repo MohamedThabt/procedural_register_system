@@ -1,0 +1,13 @@
+database name >> register_system
+
+table name >> user >> just one table
+columns >> 
+id
+name
+email
+phone
+password
+
+
+<?php include"include/header.php"; ?>
+<?php include"include/footer.php"?>
