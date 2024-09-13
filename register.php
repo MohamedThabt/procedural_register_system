@@ -22,6 +22,18 @@ if(isset($_SESSION['user_name'])){
             <div class="form-container p-4 ">
                 <h4 class="text-center mb-2">Registration Form</h4>
                 <form class="needs-validation" novalidate method="post" action="controller/register.php">
+                
+                <!-- Display error messages -->
+                <?php
+                if (isset($_SESSION['errors']) && is_array($_SESSION['errors'])) {
+                    foreach ($_SESSION['errors'] as $error) {
+                        echo '<div class="alert alert-danger text-center">' . htmlspecialchars($error) . '</div>';
+                    }
+                    // Clear the errors from the session after displaying
+                    unset($_SESSION['errors']);
+                }
+                ?>
+
                     <div class="input-group mb-2">
                         <span class="input-group-text">
                             <i class="fas fa-user"></i>

@@ -18,12 +18,20 @@ test git
 to do list for this project 
 
 Add reset password  --> Done 🔥
-add more validation 
+add more validation --> Done 🔥
+Add feature admin or not 
+Add crud feature only for admin
 write readme file
-handling index routing(home)
+add email vertification  
+uploud user photo and view it in the home
+handling index routing(home) --> Done 🔥
 
 
 
+validation >> we can do it with:
+1- front end (client side validation ) but hacker thow (by pass)
+    - requiredd attribute
+    - bootstarp validation with js
 
-
+2- back end  (server side validation)
 
